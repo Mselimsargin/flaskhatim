@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V4</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicon.ico') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animate/animate.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animsition/css/animsition.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/select2/select2.min.cs') }}s">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/daterangepicker/daterangepicker.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action="/add" method="POST">
+				<div class="wrap-input100 input100-select">
+					 
+					<label style="color: red;" for="select1">MINTIKA</label>
+					<div>
+						<select onchange="displayDivDemo()" class="selection-2" name="service1" id="select1" >
+							<option value=""> Please Select </option>
+                            <option value="GAUTENG"> GAUTENG </option>
+          					<option value="MPUMALANGA"> MPUMALANGA </option>
+          					<option value="KWAZULU NATAL"> KWAZULU NATAL </option>
+          					<option value="LIMPOPO"> LIMPOPO </option>
+          					<option value="NORTH WEST"> NORTH WEST </option>
+          					<option value="WESTERNCAPE"> WESTERNCAPE </option>
+         					<option value="GÜNEYDOĞU AFRİKA"> GÜNEYDOĞU AFRİKA </option>
+         					<option value="DOĞU AFRİKA"> DOĞU AFRİKA </option>
+          					<option value="KUZEYDOĞU AFRİKA"> KUZEYDOĞU AFRİKA </option>
+          					<option value="ORTA AFRİKA"> ORTA AFRİKA </option>
+          					<option value="ORTABATI AFRİKA"> ORTABATI AFRİKA </option>
+          					<option value="BATI AFRİKA"> BATI AFRİKA </option>
+          					<option value="LATİN AMERİKA"> LATİN AMERİKA </option>
+          					<option value="AFRİKA OFİS"> AFRİKA OFİS </option>
+						</select>	
+					</div>	
+					<div id="div2">
+						<label style="color: red;" for="select2"> KURUM</label>
+						<select  class="selection-2" name="service" id="select2" >
+							<option value=""> Please Select </option>
+          					<option value="DIVERSITY FARKLILIK DERNEĞİ"> DIVERSITY FARKLILIK DERNEĞİ </option>
+          					<option value="HEDEF DERNEĞİ"> HEDEF DERNEĞİ </option>
+          					<option value="KADIKÖY AFRİKA OFİS"> KADIKÖY AFRİKA OFİS </option>
+          					<option value="ÜSKÜDAR AFRİKA OFİS"> ÜSKÜDAR AFRİKA OFİS </option>
+							<option value="AKDENİZ"> AKDENİZ </option>
+							<option value="ASHABI SUFFE"> ASHABI SUFFE </option>
+							<option value="BAMAKO KIZ"> BAMAKO KIZ </option>
+							<option value="BOFFA-ABDÜLKADİR BAŞ"> BOFFA-ABDÜLKADİR BAŞ </option>
+							<option value="DENİZ"> DENİZ </option>
+							<option value="FANAY"> FANAY </option>
+							<option value="FATİH"> FATİH </option>
+							<option value="FERHAN SULTAN KIZ KURSU"> FERHAN SULTAN KIZ KURSU </option>
+							<option value="FERHATLAR"> FERHATLAR </option>
+							<option value="FREE TOWN SÜLEYMANİYE"> FREE TOWN SÜLEYMANİYE </option>
+							<option value="GAMBİYA KIZ"> GAMBİYA KIZ </option>
+							<option value="HASBAHÇE"> HASBAHÇE </option>
+							<option value="HİSAR"> HİSAR </option>
+							<option value="KAMBANYA"> KAMBANYA </option>
+							<option value="KANKAN SEYYİD AHMED"> KANKAN SEYYİD AHMED </option>
+							<option value="KAYMAK HAFIZ"> KAYMAK HAFIZ </option>
+							<option value="KONAKRİ KIZ"> KONAKRİ KIZ </option>
+							<option value="KONAKRİ SÜLEYMANİYE"> KONAKRİ SÜLEYMANİYE </option>
+							<option value="LAMBANYİ"> LAMBANYİ </option>
+							<option value="LES PETİTES PERLES DAKAR"> LES PETİTES PERLES DAKAR </option>
+							<option value="LES PETİTES PERLES THİES"> LES PETİTES PERLES THİES </option>
+							<option value="MORİTANYA HAFİZE SULTAN KIZ"> MORİTANYA HAFİZE SULTAN KIZ </option>
+							<option value="MORİTANYA SÜLEYMANİYE"> MORİTANYA SÜLEYMANİYE </option>
+							<option value="PİR"> PİR </option>
+							<option value="SANDİARA"> SANDİARA </option>
+							<option value="SEBİKOTAN"> SEBİKOTAN </option>
+							<option value="SEGOU-ARİFAN"> SEGOU-ARİFAN </option>
+							<option value="SENEGAL BEDİA SULTAN KIZ"> SENEGAL BEDİA SULTAN KIZ </option>
+							<option value="SEYYİD ARİF"> SEYYİD ARİF </option>
+							<option value="SEYYİD KAMİL"> SEYYİD KAMİL </option>
+							<option value="ÇAMLICA OFİS"> ÇAMLICA OFİS </option>
+							<option value="BİSSAU ERKEK"> BİSSAU ERKEK </option>
+							<option value="SANDİARA ERKEK"> SANDİARA ERKEK </option>
+							<option value="KURUSA"> KURUSA </option>
+							<option value="DAKAR ÇAMLICA"> DAKAR ÇAMLICA </option>
+							<option value="KASIMPAŞA"> KASIMPAŞA </option>
+							<option value="LİBERYA KAYMAK HAFIZ"> LİBERYA KAYMAK HAFIZ </option>
+							<option value="SÜLEYMANİYE"> SÜLEYMANİYE </option>
+							<option value="AHMET FURKAN (NYALI)"> AHMET FURKAN (NYALI) </option>
+							<option value="DENİZ PRİMARY SCHOOL"> DENİZ PRİMARY SCHOOL </option>
+							<option value="ECOLE MATERNELLE LA CİBLE"> ECOLE MATERNELLE LA CİBLE </option>
+							<option value="EMİR ARİF AHMET DENİZOLGUN"> EMİR ARİF AHMET DENİZOLGUN </option>
+							<option value="ENTEBBE"> ENTEBBE </option>
+							<option value="GIHOSHA"> GIHOSHA </option>
+							<option value="GOMA"> GOMA </option>
+							<option value="HURLINGHAM"> HURLINGHAM </option>
+							<option value="JITIMAI KIZ"> JITIMAI KIZ </option>
+							<option value="KAJJANSI SISA"> KAJJANSI SISA </option>
+							<option value="KAKUYİNİ"> KAKUYİNİ </option>
+							<option value="KAMPALA"> KAMPALA </option>
+							<option value="KIGALI NYAKABANDA"> KIGALI NYAKABANDA </option>
+							<option value="KOMOROS"> KOMOROS </option>
+							<option value="LALE BUSTANİ CHİLDREN ACADEMY"> LALE BUSTANİ CHİLDREN ACADEMY </option>
+							<option value="LAMU"> LAMU </option>
+							<option value="LİTTLE GEMS ACADEMY GİKONDO"> LİTTLE GEMS ACADEMY GİKONDO </option>
+							<option value="LİTTLE GEMS ACADEMY KACYİRU"> LİTTLE GEMS ACADEMY KACYİRU </option>
+							<option value="MALİNDİ MAJENGO"> MALİNDİ MAJENGO </option>
+							<option value="MBARARA"> MBARARA </option>
+							<option value="MBEZI"> MBEZI </option>
+							<option value="MUTANGA NORD"> MUTANGA NORD </option>
+							<option value="MİKOCHENİ"> MİKOCHENİ </option>
+							<option value="NAIVASHA"> NAIVASHA </option>
+							<option value="NAKURU"> NAKURU </option>
+							<option value="NAİROBİ KIZ"> NAİROBİ KIZ </option>
+							<option value="NYALI KIZ"> NYALI KIZ </option>
+							<option value="PEARLS KIDS ACADEMY"> PEARLS KIDS ACADEMY </option>
+							<option value="PEMBA"> PEMBA </option>
+							<option value="SHANZU"> SHANZU </option>
+							<option value="YUVAM PRESCHOOL"> YUVAM PRESCHOOL </option>
+							<option value="ZEİMET KIZ"> ZEİMET KIZ </option>
+							<option value="DARÜSSELAM ANAOKULU"> DARÜSSELAM ANAOKULU </option>
+							<option value="KAJANSİ İLKOKUL"> KAJANSİ İLKOKUL </option>
+							<option value="MOMBASSA"> MOMBASSA </option>
+							<option value="MOMBASSA KIZ"> MOMBASSA KIZ </option>
+							<option value="RUNDA CAMİİ"> RUNDA CAMİİ </option>
+							<option value="EBUBEKIR SIDDIK"> EBUBEKIR SIDDIK </option>
+							<option value="ENTEBBE ÇAMLICA"> ENTEBBE ÇAMLICA </option>
+							<option value="GÜLBAHÇE (MAGOMENI)"> GÜLBAHÇE (MAGOMENI) </option>
+							<option value="KAJJANSİ SİSA"> KAJJANSİ SİSA </option>
+							<option value="KIBLETEYN"> KIBLETEYN </option>
+							<option value="MAKUMBUSHO"> MAKUMBUSHO </option>
+							<option value="MÜKERRER MBARARA TALEBE YURDU"> MÜKERRER MBARARA TALEBE YURDU </option>
+							<option value="MÜKERRER NGONG"> MÜKERRER NGONG </option>
+							<option value="NAKURU TALEBE YURDU"> NAKURU TALEBE YURDU </option>
+							<option value="NGONG"> NGONG </option>
+							<option value="SOUTH C"> SOUTH C </option>
+							<option value="SOUTH C"> SOUTH C </option>
+							<option value="ARIFIN"> ARIFIN </option>
+							<option value="BAKERTON KIZ"> BAKERTON KIZ </option>
+							<option value="BEYERSPARK"> BEYERSPARK </option>
+							<option value="BÜYÜK ÇAMLICA"> BÜYÜK ÇAMLICA </option>
+							<option value="ENDERUN TUTION CENTRE"> ENDERUN TUTION CENTRE </option>
+							<option value="EVİM PRESCHOOL"> EVİM PRESCHOOL </option>
+							<option value="JOHANNESBURG OFIS"> JOHANNESBURG OFIS </option>
+							<option value="KASIMPASA"> KASIMPASA </option>
+							<option value="KÜÇÜK ÇAMLICA"> KÜÇÜK ÇAMLICA </option>
+							<option value="PRETORIA VALIDE SULTAN KIZ KURSU"> PRETORIA VALIDE SULTAN KIZ KURSU </option>
+							<option value="ROSHNEE ANAOKULU"> ROSHNEE ANAOKULU </option>
+							<option value="SADIKLAR"> SADIKLAR </option>
+							<option value="DAMAK BÜYÜK ÇAMLICA"> DAMAK BÜYÜK ÇAMLICA </option>
+							<option value="TUNAHAN"> TUNAHAN </option>
+							<option value="FERHAN SULTAN"> FERHAN SULTAN </option>
+							<option value="HOUGHTON"> HOUGHTON </option>
+							<option value="LADIUM ERKEK KURSU"> LADIUM ERKEK KURSU </option>
+							<option value="SADIKLAR MAYFAİR"> SADIKLAR MAYFAİR </option>
+							<option value="SİLİSTİREVİ"> SİLİSTİREVİ </option>
+							<option value="AREA 9 KIZ"> AREA 9 KIZ </option>
+							<option value="BRIDGE ACADEMY"> BRIDGE ACADEMY </option>
+							<option value="EBUBEKİR SIDDIK KIZ"> EBUBEKİR SIDDIK KIZ </option>
+							<option value="KASUNGU"> KASUNGU </option>
+							<option value="LUSAKA (SÜLEYMANİYE)"> LUSAKA (SÜLEYMANİYE) </option>
+							<option value="MAJUNGA (FATİH)"> MAJUNGA (FATİH) </option>
+							<option value="MAKENİ BONAVENTURA"> MAKENİ BONAVENTURA </option>
+							<option value="MAPUTO ERKEK FETİH"> MAPUTO ERKEK FETİH </option>
+							<option value="MAPUTO KIZ GÜLBAHÇE"> MAPUTO KIZ GÜLBAHÇE </option>
+							<option value="MAPUTO ORTAOKUL"> MAPUTO ORTAOKUL </option>
+							<option value="MBWATALİKA"> MBWATALİKA </option>
+							<option value="MUDİ"> MUDİ </option>
+							<option value="MZUZU"> MZUZU </option>
+							<option value="NDOLA"> NDOLA </option>
+							<option value="NKHOTAKOTA"> NKHOTAKOTA </option>
+							<option value="SONGANİ"> SONGANİ </option>
+							<option value="STRATHAVEN"> STRATHAVEN </option>
+							<option value="SUMMIT HEIGHTS SCHOOLS 1"> SUMMIT HEIGHTS SCHOOLS 1 </option>
+							<option value="SUMMIT HEIGHTS SCHOOLS 2"> SUMMIT HEIGHTS SCHOOLS 2 </option>
+							<option value="TANA ERKEK YURDU"> TANA ERKEK YURDU </option>
+							<option value="BYPASS ROAD"> BYPASS ROAD </option>
+							<option value="LUSAKA ERKEK YURDU"> LUSAKA ERKEK YURDU </option>
+							<option value="SALİMA ERKEK"> SALİMA ERKEK </option>
+							<option value="ABDULLAH MEDRESE BRIDGE ACADEMY"> ABDULLAH MEDRESE BRIDGE ACADEMY </option>
+							<option value="ANTANANARIVO GÜLBAHÇE"> ANTANANARIVO GÜLBAHÇE </option>
+							<option value="BRIDGE ACADEMY ANAOKULU"> BRIDGE ACADEMY ANAOKULU </option>
+							<option value="BRİDGE ACADEMY ORTAOKUL"> BRİDGE ACADEMY ORTAOKUL </option>
+							<option value="GÜLBAHÇE"> GÜLBAHÇE </option>
+							<option value="HARARE (ÇAMLICA)"> HARARE (ÇAMLICA) </option>
+							<option value="INHAMBANE"> INHAMBANE </option>
+							<option value="MAJUNGA GÜLBAHÇE YURDU"> MAJUNGA GÜLBAHÇE YURDU </option>
+							<option value="MAKENI"> MAKENI </option>
+							<option value="NAMPULA (SÜLEYMANİYE)"> NAMPULA (SÜLEYMANİYE) </option>
+							<option value="ADAMA 1"> ADAMA 1 </option>
+							<option value="ADAMA 2"> ADAMA 2 </option>
+							<option value="ADDIS ABABA 1"> ADDIS ABABA 1 </option>
+							<option value="ADDİS ABABA 2"> ADDİS ABABA 2 </option>
+							<option value="ADDİS ABABA KIZ"> ADDİS ABABA KIZ </option>
+							<option value="ARTA"> ARTA </option>
+							<option value="BISHOFTU"> BISHOFTU </option>
+							<option value="DIREDAWA"> DIREDAWA </option>
+							<option value="GALKAYO"> GALKAYO </option>
+							<option value="HARAR 1"> HARAR 1 </option>
+							<option value="HARAR 2"> HARAR 2 </option>
+							<option value="HARAR 3"> HARAR 3 </option>
+							<option value="HARGEISA"> HARGEISA </option>
+							<option value="HAWASSA"> HAWASSA </option>
+							<option value="JİGJİGA"> JİGJİGA </option>
+							<option value="MEKELLE"> MEKELLE </option>
+							<option value="MOGADISHU"> MOGADISHU </option>
+							<option value="SHASHAMANE"> SHASHAMANE </option>
+							<option value="YABELLO 1"> YABELLO 1 </option>
+							<option value="YABELLO 2"> YABELLO 2 </option>
+							<option value="YABELLO 3"> YABELLO 3 </option>
+							<option value="YABELLO"> YABELLO </option>
+							<option value="BLOEMFONTEIN"> BLOEMFONTEIN </option>
+							<option value="CLARE HILLS HOUSE OF WISDOM"> CLARE HILLS HOUSE OF WISDOM </option>
+							<option value="DAMAK FRESH FOODS LESOTHO"> DAMAK FRESH FOODS LESOTHO </option>
+							<option value="DAMAK PIETERMARITZBURG"> DAMAK PIETERMARITZBURG </option>
+							<option value="DURBAN BEDİA SULTAN KIZ"> DURBAN BEDİA SULTAN KIZ </option>
+							<option value="DURBAN EVİM"> DURBAN EVİM </option>
+							<option value="DURBAN SÜLEYMANİYE"> DURBAN SÜLEYMANİYE </option>
+							<option value="GROWING MINDS MONTESSORI SCHOOL"> GROWING MINDS MONTESSORI SCHOOL </option>
+							<option value="HASAN DURUM"> HASAN DURUM </option>
+							<option value="ISIPINGO"> ISIPINGO </option>
+							<option value="LESOTHO EVİM"> LESOTHO EVİM </option>
+							<option value="NANDSINDLELA"> NANDSINDLELA </option>
+							<option value="SADABAD"> SADABAD </option>
+							<option value="WESTVILLE KIZ KURSU"> WESTVILLE KIZ KURSU </option>
+							<option value="VULINDLELA ECO VILLAGE"> VULINDLELA ECO VILLAGE </option>
+							<option value="NEWCASTLE"> NEWCASTLE </option>
+							<option value="MASERU"> MASERU </option>
+							<option value="BEDIA SULTAN KIZ KURSU"> BEDIA SULTAN KIZ KURSU </option>
+							<option value="ESSENDENE"> ESSENDENE </option>
+							<option value="GROWING MINDS MONTESSORİ SCHOOL"> GROWING MINDS MONTESSORİ SCHOOL </option>
+							<option value="KIMBERLEY"> KIMBERLEY </option>
+							<option value="AMAZONLAR"> AMAZONLAR </option>
+							<option value="BUENOS AIRES"> BUENOS AIRES </option>
+							<option value="COLETORA DE ROSAS"> COLETORA DE ROSAS </option>
+							<option value="KARAKAS"> KARAKAS </option>
+							<option value="PANAMA"> PANAMA </option>
+							<option value="SAO PAULO SÜLEYMANİYE"> SAO PAULO SÜLEYMANİYE </option>
+							<option value="ŞİLİ SANTİAGO"> ŞİLİ SANTİAGO </option>
+							<option value="CARACAS"> CARACAS </option>
+							<option value="VENEZUELA"> VENEZUELA </option>
+							<option value="ŞİLİ"> ŞİLİ </option>
+							<option value="ENDERUN COLLEGE"> ENDERUN COLLEGE </option>
+							<option value="EVİM LOUİS TRİCHARDT ANAOKULU"> EVİM LOUİS TRİCHARDT ANAOKULU </option>
+							<option value="EVİM POLOKWANE ANAOKULU"> EVİM POLOKWANE ANAOKULU </option>
+							<option value="EVİM TZANEEN ANAOKULU"> EVİM TZANEEN ANAOKULU </option>
+							<option value="LOUIS TRICHARDT"> LOUIS TRICHARDT </option>
+							<option value="NORTHERN STAR BOYS PRIMARY SCHOOL"> NORTHERN STAR BOYS PRIMARY SCHOOL </option>
+							<option value="PHALABORWA"> PHALABORWA </option>
+							<option value="POLOKWANE SÜLEYMANİYE"> POLOKWANE SÜLEYMANİYE </option>
+							<option value="TZANEEN"> TZANEEN </option>
+							<option value="TZANEEN ELEGANT GIRLS SCHOOL"> TZANEEN ELEGANT GIRLS SCHOOL </option>
+							<option value="TZANEEN KIZ KURSU"> TZANEEN KIZ KURSU </option>
+							<option value="LOUİS TRİCHARDT"> LOUİS TRİCHARDT </option>
+							<option value="MANZİNİ KURSU"> MANZİNİ KURSU </option>
+							<option value="WITBANK"> WITBANK </option>
+							<option value="ŞEHİT ŞÜKRÜ KOÇYİĞİT"> ŞEHİT ŞÜKRÜ KOÇYİĞİT </option>
+							<option value="MAHIKENG"> MAHIKENG </option>
+							<option value="LICHTENBURG"> LICHTENBURG </option>
+							<option value="EBUBEKIR EFENDI"> EBUBEKIR EFENDI </option>
+							<option value="GÜLDEREN SULTAN KIZ"> GÜLDEREN SULTAN KIZ </option>
+							<option value="MITCHELS PLAIN"> MITCHELS PLAIN </option>
+							<option value="PORT ELIZABETH"> PORT ELIZABETH </option>
+							<option value="SARAYBURNU"> SARAYBURNU </option>
+							<option value="WALMER ESTATE ANAOKULU"> WALMER ESTATE ANAOKULU </option>
+							<option value="ABECHE"> ABECHE </option>
+							<option value="BANGUI"> BANGUI </option>
+							<option value="BRAZZAVİLLE"> BRAZZAVİLLE </option>
+							<option value="DOUALA"> DOUALA </option>
+							<option value="LIBREVILLE"> LIBREVILLE </option>
+							<option value="LIBREVILLE ANAOKULU"> LIBREVILLE ANAOKULU </option>
+							<option value="MALABO"> MALABO </option>
+							<option value="MONGO ERKEK DAİMİ"> MONGO ERKEK DAİMİ </option>
+							<option value="NDJAMENA KIZ KURSU"> NDJAMENA KIZ KURSU </option>
+							<option value="NGOUNDERE"> NGOUNDERE </option>
+							<option value="YAOUNDE"> YAOUNDE </option>
+							<option value="YAOUNDE KIZ KURSU"> YAOUNDE KIZ KURSU </option>
+							<option value="ÇAD NDJAMENA"> ÇAD NDJAMENA </option>
+							<option value="ABECHE ERKEK YURDU"> ABECHE ERKEK YURDU </option>
+							<option value="KİNSHASA"> KİNSHASA </option>
+							<option value="ABUJA"> ABUJA </option>
+							<option value="ABİDJAN"> ABİDJAN </option>
+							<option value="ACRA"> ACRA </option>
+							<option value="BENİN SÜLEYMANİYE"> BENİN SÜLEYMANİYE </option>
+							<option value="BOBIEL"> BOBIEL </option>
+							<option value="FIDJROSSE"> FIDJROSSE </option>
+							<option value="FİLDİŞİ TUNAHAN"> FİLDİŞİ TUNAHAN </option>
+							<option value="HAMİDİYE"> HAMİDİYE </option>
+							<option value="HAMİDİYE DAİMİ"> HAMİDİYE DAİMİ </option>
+							<option value="KADUNA"> KADUNA </option>
+							<option value="KEGUE-LOME"> KEGUE-LOME </option>
+							<option value="KUMASİ"> KUMASİ </option>
+							<option value="MALLAM"> MALLAM </option>
+							<option value="MARADİ"> MARADİ </option>
+							<option value="NIAMEY KIZ KURSU"> NIAMEY KIZ KURSU </option>
+							<option value="NIAMEY SEYYİD AHMED"> NIAMEY SEYYİD AHMED </option>
+							<option value="SANİYE ZEYNEP KIZ KURSU"> SANİYE ZEYNEP KIZ KURSU </option>
+							<option value="TAMALE"> TAMALE </option>
+							<option value="TAMALE KIZ"> TAMALE KIZ </option>
+							<option value="DJIDJOLE-LOME"> DJIDJOLE-LOME </option>
+						</select>	
+					</div>	
+				
+					<div>
+						<label style="color: red;" for="select16"> HATİM TÜRÜ</label>
+						<select class="selection-2" name="service3" id="select16">
+							<option value=""> Please Select </option>
+							<option value="Kur&#x27;an- Kerim"> Kur&#x27;an- Kerim </option>
+							<option value="Yasin-i Şerif"> Yasin-i Şerif </option>
+							<option value="Tevdid Hatmi"> Tevdid Hatmi </option>
+						</select>	
+					</div>	
+					<div>
+						<label style="color: red;" for="input1"> HATİM ADETİ</label><br>
+						    <input name="service4" id="input1" type="text" placeholder="Örn 23" style="width:310px" size="310">
+					</div>		
+							
+				</form>
+				
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							<span>
+								Submit
+								<i onClick="location.href='add';" value='submit' class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+				
+			</form>
+        </div>
+	</div>
+    <div id="dropDownSelect1"></div>
+
+				
+
+				
+
+		
+
+
+
+	
+
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='vendor/animsition/js/animsition.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='vendor/daterangepicker/moment.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vendor/daterangepicker/daterangepicker.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='vendor/countdowntime/countdowntime.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+
+</body>
+</html>
